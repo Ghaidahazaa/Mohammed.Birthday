@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthday Wisher</title>
+  </head>
+  <body>
+    <h1>Happy Birthday!</h1>
+    <p>
+      Today is <time id="birthday-date"></time>. Wishing a very happy birthday to <span id="Mohammed"></span>!
+    </p>
+    <script>
+      const birthdayDate = new Date("2024-03-23"); // Replace with the birthday date
+      const name = "Mohammed"; // Replace with the name of the birthday person
+      const today = new Date();
+
+      if (today.getMonth() === birthdayDate.getMonth() && today.getDate() === birthdayDate.getDate()) {
+        document.getElementById("birthday-date").textContent = "your birthday!";
+        document.getElementById("name").textContent = name;
+      } else {
+        document.getElementById("birthday-date").textContent = birthdayDate.toLocaleDateString();
+      }
+    </script>
+  </body>
+</html>
